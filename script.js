@@ -48,7 +48,7 @@ function showSection(sectionId) {
             document.title = "SnapCaps";
     }
 }
-//  FOR IMAGE MODALS WHEN AN IMAGE IS CLICKED/TAPPED
+//  FOR IMAGE MODALS WHEN AN IMAGE IS CLICKED/TAPPED (WILL BE ADDED IN THE FUTURE)
 
 // function expandImage(selectedImage) {
 
