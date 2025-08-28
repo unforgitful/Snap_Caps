@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.notif-bar {
+    background-color: rgba(255, 0, 0, 0.842)
+}
+
 nav {
     display: flex;
     flex-direction: column;
@@ -84,6 +88,11 @@ h1 {
 
 /* Small devices (phones) */
 @media (max-width: 600px) {
+
+.notif-bar {
+    display: none;
+}
+
 nav {
     width: 100%;
     height: auto;
@@ -260,6 +269,11 @@ h1 {
 
 /* Medium devices (tablets) */
 @media (min-width: 601px) and (max-width: 1024px) {
+
+    .notif-bar {
+    display: none;
+    }
+
     .navMenu {
         display: none;
     }
