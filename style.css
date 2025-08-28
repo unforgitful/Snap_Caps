@@ -1,0 +1,365 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    background-color: hsl(45, 100%, 50%);
+    overflow: auto;
+    z-index: 1000;
+}
+
+.logo-container {
+    text-align: center;
+    padding: 18px;
+}
+.navbar-logo {
+    width: 75px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-toggler {
+    display: none;
+}
+
+#navMenu {
+    list-style-type: none;
+    text-align: center;
+}
+
+li .navbutton {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    padding: 16px 24px;
+    font-size: 2rem;
+}
+
+li .navbutton:hover{
+    /* background: hsl(45, 100%, 59%); */
+    text-decoration-line: underline;
+    text-decoration-color: #EF6122;
+    text-decoration-thickness: 4px;
+}
+
+#home,
+#gallery,
+#about,
+#contact {
+    margin-left: 25%;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    padding: 20px;
+    color: #EF6122;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 3em;
+}
+
+.user-image {
+    cursor: pointer;
+}
+
+.image-wrapper a:hover {
+    color: #f86222;
+}
+
+
+/* MEDIA QUERY SECTION */
+
+/* Small devices (phones) */
+@media (max-width: 600px) {
+nav {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(45, 100%, 50%);
+    overflow: visible;
+}
+
+.navbar-logo {
+    width: 50px;
+    height: auto;
+}
+
+.navbar-toggler {
+    display: block;
+    width: 40px;
+    height: 40px;
+    color: #EF6122;
+    border-radius: 3px;
+    border:none;
+    background-color: hsl(45, 100%, 50%);
+    cursor: pointer;
+}
+
+
+#navMenu {
+    max-height: 0;
+    opacity: 0;
+    display: none;
+    flex-direction: column;
+    margin: 0;
+    margin-top: 10px;
+    /* border: 3px solid; */
+    background-color: hsl(45, 100%, 50%);
+    gap: 20px;
+    overflow: hidden; 
+}
+
+
+
+#navMenu.reveal { /* THIS REVEALS THE NAVIGATION BAR */
+    display: block;
+    max-height: 600px;
+    opacity: 1;
+}
+
+#navMenu.hidden {
+    display: none;
+}
+
+li .navbutton {
+    color: white;
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    padding: 8px 16px;
+    font-size: 2rem;
+}
+
+#home, 
+#gallery,
+#about,
+#contact{
+    margin-left: 0;
+}
+h1 {
+    padding-top: 150px;
+    color: #EF6122;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 2.5em;
+}
+
+
+.home-photo {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: 100% 0;
+    overflow: hidden;
+}
+
+.home-contents {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: flex-start;
+    margin-top: 20px;
+    align-items: stretch;
+    /* border: 1px solid; */
+    gap: 10px;
+    /* background-color: hsl(45, 100%, 50%); */
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+    .home-contents::-webkit-scrollbar {
+    width: 20px;
+}
+
+    .home-contents::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+    .home-contents::-webkit-scrollbar-thumb {
+    background-color: #EF6122;
+    border-radius: 10px;
+    border: 4px solid #f0f0f0;
+}
+
+.text {
+    margin: 0;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 8px;
+    background-color: #FEBE00;
+    flex: 0 0 200px;
+    white-space: normal;
+    overflow-wrap: break-word; 
+}
+
+.gallery-contents {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.image-wrapper img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-wrapper a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #f47f4c;
+}
+
+
+.about-contents {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid;
+    border-color: #EF6122;
+    border-radius: 6px;
+    text-align: justify;
+}
+
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .navMenu {
+        display: none;
+    }
+
+    .home-photo {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    overflow: hidden;
+    }
+
+    /* ADD NAME HERE */
+    /* .home-photo:hover {
+
+    } */
+
+    .home-contents {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: flex-start;
+    margin-top: 20px;
+    padding: 10px;
+    align-items: stretch;
+    /* border: 1px solid; */
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    }
+
+    .home-contents::-webkit-scrollbar {
+    width: 20px;
+    }
+
+    .home-contents::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    }
+
+    .home-contents::-webkit-scrollbar-thumb {
+    background-color: #EF6122;
+    border-radius: 10px;
+    border: 4px solid #f0f0f0;
+    }
+
+    .text {
+    margin: 0;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 8px;
+    background-color: #FEBE00;
+    flex: 0 0 200px;
+    white-space: normal;
+    overflow-wrap: break-word; 
+    }
+
+    .about-contents {
+    margin: 10px;
+    padding: 25px;
+    border: 2px solid;
+    border-color: #EF6122;
+    border-radius: 6px;
+    text-align: justify;
+}
+}
+
+/* Large devices (desktops) */
+@media (min-width: 1025px) {
+    .navMenu {
+        display: none;
+    }
+    li .navbutton {
+        font-size: 2.5rem;
+    }
+
+
+
+    .home-photo {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    overflow: hidden;
+    }
+
+    .home-contents {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: flex-start;
+    margin-top: 20px;
+    padding: 10px;
+    align-items: stretch;
+    /* border: 1px solid; */
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    }
+
+    .home-contents::-webkit-scrollbar {
+    width: 20px;
+    }
+
+    .home-contents::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    }
+
+    .home-contents::-webkit-scrollbar-thumb {
+    background-color: #EF6122;
+    border-radius: 10px;
+    border: 4px solid #f0f0f0;
+    }
+
+    .text {
+    margin: 0;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 8px;
+    background-color: #FEBE00;
+    flex: 0 0 200px;
+    white-space: normal;
+    overflow-wrap: break-word; 
+    }
+}
