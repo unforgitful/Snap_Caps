@@ -267,11 +267,39 @@ h1 {
     padding: 10px;
 }
 
+.contact-help {
+    font-size: 1.5rem;
+    border-radius: 6px;
+}
+
 .contact-contents ol li {
     gap: 8px;
 }
 
+.contact-modal {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    padding-top: 200px;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f0f0f079;
+    z-index: 1111;
+}
 
+.contact-modal-contents {
+    padding: 50px;
+    background-color:#f0f0f0;
+}
+
+
+
+.contact-modal-contents input[type=text] {
+    padding: 8px 5px;
+    margin: 10px 0;
+    width: 100%;
 }
 
 /* Medium devices (tablets) */
@@ -345,6 +373,10 @@ h1 {
     border-radius: 6px;
     text-align: justify;
 }
+    .contact-modal {
+        display: none;
+    }
+
 }
 
 /* Large devices (desktops) */
@@ -403,5 +435,10 @@ h1 {
     flex: 0 0 200px;
     white-space: normal;
     overflow-wrap: break-word; 
+    }
+
+
+    .contact-modal {
+        display: none;
     }
 }
