@@ -48,26 +48,28 @@ function showSection(sectionId) {
             document.title = "SnapCaps";
     }
 }
-//  FOR IMAGE MODALS WHEN AN IMAGE IS CLICKED/TAPPED (WILL BE ADDED IN THE FUTURE)
 
-// function expandImage(selectedImage) {
 
-// }
-//     const galleryImages = document.querySelectorAll(".image-wrapper");
-//     galleryImages.forEach(image => {
-//         const imageId = image.dataset.imageId;
-//         if (!imageId) {
-//             console.warn("No image ID for this image.");
-//             return;
-//         } else {
-//             console.log("Image Identification Success!");
-//         }
-//         const imageShow = document.getElementById(imageId);
-//         if (imageShow) {
-//             expandImage(imageShow);
-//         } else {
-//             console.warn(`Image ID "${imageId}" not found.`);
-//         }
-//     })
+
+const contactModal = document.getElementById("contactModal");
+const openContactModal = document.getElementById("helpModal");
+const closeContactModal = document.getElementsByClassName("exit")[0];
+
+openContactModal.onclick = function() {
+    contactModal.style.display = "block";
+}
+
+closeContactModal.onclick = function() {
+    contactModal.style.display = "none";
+}
+
+window.onclick = function(close) {
+    if (close.target == contactModal) {
+        contactModal.style.display = "none";
+    }
+}
+
+
+
 
 

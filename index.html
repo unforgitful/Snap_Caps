@@ -119,15 +119,16 @@
                         <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
                         <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
                     </ol>
-                <button class="contact-help">Send us an email regarding your concern!</button>
+                <button id="helpModal" class="contact-help">Send us an email regarding your concern!</button>
             </div>
 
-            <div class="contact-modal">
+            <div id="contactModal" class="contact-modal">
                 <div class="contact-modal-contents">
-                    <label class="contact-label" for="name">Please fill in the blanks below so we can reach out to your concerns!</label>
+                 <span id="closeModal" class="exit">&times;</span>
+                    <label class="contact-label" for="name">Please enter your name and email so we can assist you.</label>
                     <input type="text" placeholder="Enter your name here..." required><br>
                     <input type="text" placeholder="Enter your email here..." required><br>
-                    <input type="submit" value="Submit" required>
+                    <input type="submit" value="Submit">
                 </div>
             </div>
     </section>
