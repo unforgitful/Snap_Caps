@@ -5,7 +5,13 @@
 }
 
 .notif-bar {
-    background-color: rgba(255, 0, 0, 0.842)
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.842);
+    width: 100%;
+    max-width: 100%;
+    top: 0;
+    overflow-wrap: break-word;
+    z-index: 1200;
 }
 
 nav {
@@ -66,6 +72,54 @@ li .navbutton:hover{
     text-align: center;
 }
 
+
+.home-photo {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.home-contents {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: flex-start;
+    margin-top: 20px;
+    align-items: stretch;
+    /* border: 1px solid; */
+    gap: 10px;
+    /* background-color: hsl(45, 100%, 50%); */
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.home-contents::-webkit-scrollbar {
+    width: 20px;
+}
+
+.home-contents::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+.home-contents::-webkit-scrollbar-thumb {
+    background-color: #EF6122;
+    border-radius: 10px;
+    border: 4px solid #f0f0f0;
+}
+
+.text {
+    margin: 0;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 8px;
+    background-color: #FEBE00;
+    flex: 0 0 200px;
+    white-space: normal;
+    overflow-wrap: break-word; 
+}
+
 h1 {
     margin: 0;
     padding: 20px;
@@ -74,6 +128,32 @@ h1 {
     font-weight: 400;
     font-size: 3em;
 }
+
+#gallery {
+    border: 5px solid #EF6122;
+    padding: 20px;
+    height: 100vh;
+}
+
+.gallery-contents {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 0;
+    gap: 16px;
+}
+
+.image-wrapper img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-wrapper a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #f47f4c;
+}
+
 
 .user-image {
     cursor: pointer;
@@ -347,7 +427,9 @@ h1 {
 }
 
 
-/* Medium devices (tablets) */
+
+
+/* <--- Medium devices (TABLETS) --->*/
 @media (min-width: 601px) and (max-width: 1024px) {
 
     .notif-bar p{
@@ -361,15 +443,10 @@ h1 {
     .home-photo {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 50px;
     object-fit: cover;
     overflow: hidden;
     }
-
-    /* ADD NAME HERE */
-    /* .home-photo:hover {
-
-    } */
 
     .home-contents {
     display: flex;
@@ -421,7 +498,7 @@ h1 {
 
 }
 
-/* Large devices (desktops) */
+/* Large devices (DESKTOPS) */
 @media (min-width: 1025px) {
     .navMenu {
         display: none;
