@@ -280,6 +280,7 @@ h1 {
 
 .contact-help:hover {
     border-color: #EF6122;
+    text-decoration: underline;
 }
 
 .contact-contents ol li {
@@ -330,6 +331,21 @@ h1 {
     margin: 10px 0;
     width: 100%;
 }
+
+.contact-modal-contents input[type=submit] {
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.contact-modal-contents input[type=submit]:hover {
+    color: #EF6122;
+    border-color: #EF6122;
+}
+
 
 /* Medium devices (tablets) */
 @media (min-width: 601px) and (max-width: 1024px) {
